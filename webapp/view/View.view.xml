@@ -1,0 +1,131 @@
+<mvc:View controllerName="ypf.zz1com512freelm4.controller.View"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:m="sap.m"
+        xmlns:u="sap.ui.unified"
+        xmlns:core="sap.ui.core"
+        height="100%">
+   <m:Page
+            showHeader="false"
+            enableScrolling="false">
+        <m:content>       
+          
+                    <m:OverflowToolbar style="Clear">
+                        <m:Title id="title" text="{i18n>Resumen}"/>
+                        <m:ToolbarSpacer/>
+                        <m:HBox direction="Row" alignItems="Center" justifyContent="Center" >                            		
+              
+                        <m:Label text="{i18n>Desde}" class="margin"></m:Label>
+					<m:DatePicker id="DP1" placeholder="Enter Date" width="12rem" valueFormat="yyyyMMdd" displayFormat="dd/MM/yyyy" required="true"
+					change="handleChange"/>		
+
+                         <m:Label text="{i18n>Hasta}" class="margin"></m:Label>
+                        <m:DatePicker
+					id="DP2"                 
+					placeholder="Enter Date" width="12rem" valueFormat="yyyyMMdd" displayFormat="dd/MM/yyyy" required="true"
+					change="handleChange"/>
+					
+                         <m:Button id="BTN2" text="{i18n>Enviar}" class="margin" type="Emphasized" icon="sap-icon://accept" press="onEnviar"/>                      
+                        </m:HBox>
+                    </m:OverflowToolbar>  
+                    
+                      
+                     <m:Panel id="Panel1"  width="auto" class="sapUiResponsiveMargin">
+               <m:Table   items="{ path:'Resumen>/' }"  id="table1">
+                 <m:columns>
+                   <m:Column  >
+                      <m:Text text="{i18n>enviado_pdc}"></m:Text>
+                   </m:Column>     
+                   <m:Column   >
+                      <m:Text text="{i18n>emision}"></m:Text>
+                   </m:Column>          
+                   <m:Column>
+                      <m:Text text="{i18n>enviado_control}"></m:Text>
+                   </m:Column>
+                    <m:Column width="5rem">
+                      <m:Text text="{i18n>emitido}"></m:Text>
+                   </m:Column> 
+                    <m:Column>
+                      <m:Text text="{i18n>doc_sellos}"></m:Text>
+                   </m:Column> 
+                    <m:Column>
+                      <m:Text text="{i18n>fecha_sellos}"></m:Text>
+                   </m:Column> 
+                    <m:Column>
+                      <m:Text text="{i18n>vencimiento}"></m:Text>
+                   </m:Column> 
+                    <m:Column>
+                      <m:Text text="{i18n>solicitante}"></m:Text>
+                   </m:Column> 
+                    <m:Column>
+                      <m:Text text="{i18n>periodo}"></m:Text>
+                   </m:Column>  
+                   <m:Column>
+                      <m:Text text="{i18n>contrato}"></m:Text>
+                   </m:Column>   
+                   <m:Column>
+                      <m:Text text="{i18n>status}"></m:Text>
+                   </m:Column>  
+                    <m:Column>
+                      <m:Text text="{i18n>pdf_nombre}"></m:Text>
+                   </m:Column>  
+                    <m:Column>
+                     
+                   </m:Column> 
+                    
+                 </m:columns>
+                 <m:items>
+                 <m:ColumnListItem>
+                   <m:cells>
+                        <m:Text text="{Resumen>Enviado_Pdc}"/>
+                       <m:Text text="{Resumen>Emision}"/>
+
+                         <!--  	<m:ObjectNumber
+							number="{
+								path:'Resumen>Emision',
+								type: 'sap.ui.model.type.Date',
+								formatOptions: {
+                           pattern: 'yyyy/MM/dd'
+							}}"
+							 />-->
+
+
+
+
+
+
+
+                          <m:Text text="{Resumen>Enviado_Control}"/>
+                           <m:Text text="{Resumen>Emitido}"/>
+                            <m:Text text="{Resumen>Doc_sellos}"/>
+                             <m:Text text="{Resumen>Fecha_Sellos}"/>
+                              <m:Text text="{Resumen>Vencimiento}"/>
+                               <m:Text text="{Resumen>Solicitante}"/>
+                                <m:Text text="{Resumen>Periodo}"/>
+                                 <m:Text text="{Resumen>Contrato}"/>
+                                  <m:Text text="{Resumen>Status}"/>
+                                   <m:Text text="{Resumen>Pdf_Nombre}"/>
+                                    <m:Button icon="sap-icon://pdf-attachment" press="onPdf"></m:Button>
+                                 <!-- <m:Text text="{Resumen>Pdf_data}"/> -->
+
+
+
+
+
+
+
+
+
+                        <!--<m:ObjectStatus  text="{Procesos>status}" state="{path:'Procesos>status' , formatter: '.formatter.formatterColor'}"/>
+                       
+                        <m:Button icon="sap-icon://flag" press="onPress" type="Emphasized" id="BTN3"/> -->
+
+                  </m:cells>
+                  </m:ColumnListItem>
+                 </m:items>             
+                                             
+               </m:Table>
+               </m:Panel>
+            
+        </m:content>
+     </m:Page>
+</mvc:View>

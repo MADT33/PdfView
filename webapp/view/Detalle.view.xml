@@ -1,0 +1,23 @@
+<mvc:View controllerName="ypf.zz1com512freelm4.controller.Detalle"
+ xmlns:l="sap.ui.layout" 
+ xmlns:f="sap.ui.layout.form" 
+ xmlns:core="sap.ui.core"
+ xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	height="100%">
+        	<ScrollContainer
+		height="100%"
+		width="100%"
+		horizontal="true"
+		vertical="true">
+		<FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin" height="100rem">
+
+			<PDFViewer source="" id="pdfView" title="{/Title}" height="{/Height}">
+				<layoutData>
+					<FlexItemData growFactor="1" />
+				</layoutData>
+			</PDFViewer>
+		</FlexBox>
+	</ScrollContainer>
+</mvc:View>
