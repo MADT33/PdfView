@@ -13,7 +13,7 @@ xmlns:mvc="sap.ui.core.mvc"
 		vertical="true">
 		<FlexBox direction="Column" renderType="Div" class="sapUiSmallMargin" height="100rem">
 
-			<PDFViewer source="" id="pdfView" title="{/Title}" height="{/Height}">
+			<PDFViewer source="" id="pdfView" showDownloadButton="false" title="{/Title}" height="{/Height}">
 				<layoutData>
 					<FlexItemData growFactor="1" />
 				</layoutData>
